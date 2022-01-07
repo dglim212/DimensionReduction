@@ -37,9 +37,9 @@ SNE의 목표가 _X_ 와 _Y_ 가 같은 페어에서 같은 similarity을 가지
   <img src="https://latex.codecogs.com/svg.image?C&space;=&space;\sum_i&space;KL(P_i||Q_i)&space;=&space;\sum_i&space;\sum_j&space;p_{j|i}&space;log&space;\frac{p_{j|i}}{q_{j|i}}" title="C = \sum_i KL(P_i||Q_i) = \sum_i \sum_j p_{j|i} log \frac{p_{j|i}}{q_{j|i}}" />
 </p>
 
-위와 같이 Roweiss(2002)의 SNE 알고리즘은 Gaussian 분포만을 사용하였습니다. 그러나 Maaten(2008)에서는, 고차원의 데이터셋 _X_ 에서는 가우시안 분포를 사용해도 괜찮지만, 저차원인 _Y_ 에서는 Cauchy분포 (자유도가 1인 t분포)를 사용할 것을 제안하고 있습니다. Cauchy분포는 가우시안 분포보다 두터운 꼬리(heavy tail)를 가지는 성질이 있습니다. Cauchy분포를 사용한 이유, 혹은 사용함으로써 얻는 이득은 다음과 같습니다.
+위와 같이 Roweiss(2002)의 SNE 알고리즘은 Gaussian 분포만을 사용하였습니다. 그러나 Maaten(2008)에서는, 고차원의 데이터셋 _X_ 에서는 가우시안 분포를 사용해도 괜찮지만, 저차원인 _Y_ 에서는 Cauchy분포 (자유도가 1인 t분포)를 사용할 것을 제안하고 있습니다. Cauchy분포는 가우시안 분포보다 두터운 꼬리(heavy tail)를 가지는 성질이 있습니다. Cauchy분포를 사용함으로써 얻는 이득은 다음과 같습니다.
 
-- 가우시안분포와 달리, Cauchy 분포와 t 분포는 exponential 함수를 포함하지 않습니다. 이를 이용하면 연산속도에서 더 이득을 볼 수 있습니다.
+- 가우시안분포와 달리, Cauchy 분포와 t 분포는 exponential 함수를 포함하지 않습니다. 이를 이용하면 연산속도에서 이득을 볼 수 있습니다.
 - _Y_ 에서 거리가 먼 두 점을 생각했을 때, <img src="https://latex.codecogs.com/svg.image?(1&plus;||y_i-y_j||^2)^{-1}&space;\approx&space;\frac{1}{||y_i-y_j||^2}" title="(1+||y_i-y_j||^2)^{-1} \approx \frac{1}{||y_i-y_j||^2}" /> 를 만족하기 때문에, similarity에 사용된 확률값이 " _X_ 에서 _Y_ 로의 mapping의 scale"에 영향을 (상대적으로) 받지 않습니다.
 - Crowding Problem을 어느정도 해소시켜 줍니다. Crowding Problem에 대한 설명은 [Medium](https://medium.com/@Vivek06/crowding-problem-c9ba85c3bb2d)에 포스트된 글에서 확인할수 있습니다.
 
