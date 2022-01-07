@@ -53,3 +53,4 @@ t-SNE를 사용하는 경우, similarity에 대한 식이 변하게 됩니다. �
   <img src="https://latex.codecogs.com/svg.image?C=KL(P||Q)=\sum_i&space;\sum_j&space;p_{ij}&space;log\frac{p_{ij}}{q_{ij}}" title="C=KL(P||Q)=\sum_i \sum_j p_{ij} log\frac{p_{ij}}{q_{ij}}" />
 </p>
 ## Example Code
+ 
