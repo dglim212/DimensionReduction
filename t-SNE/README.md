@@ -58,5 +58,6 @@ t-SNE를 사용하는 경우, similarity에 대한 식이 변하게 됩니다. �
 <p align="center">
   <img src="https://latex.codecogs.com/svg.image?\frac{\partial&space;C}{\partial&space;y_i}&space;=&space;4\sum_{j}&space;(p_{ij}-q_{ij})(y_i&space;-&space;y_j)(1&plus;||y_i&space;-&space;y_j||^2)^{-1}" title="\frac{\partial C}{\partial y_i} = 4\sum_{j} (p_{ij}-q_{ij})(y_i - y_j)(1+||y_i - y_j||^2)^{-1}" />
 </p>
+
 ## Example Code
 MNIST 데이터셋과, Swiss Roll 데이터에 대해 t-SNE를 진행해보겠습니다.
