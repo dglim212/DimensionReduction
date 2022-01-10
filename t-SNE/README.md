@@ -61,3 +61,7 @@ t-SNE를 사용하는 경우, similarity에 대한 식이 변하게 됩니다. �
 
 ## Example Code
 MNIST 데이터셋과, Swiss Roll 데이터에 대해 t-SNE를 진행해보겠습니다.
+
+
+### Effect of Perplexity Parameter
+Perplexity는 t-SNE의 결과물에 큰 영향을 끼치는 parameter입니다. 
