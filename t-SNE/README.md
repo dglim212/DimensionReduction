@@ -59,9 +59,11 @@ t-SNE를 사용하는 경우, similarity에 대한 식이 변하게 됩니다. �
   <img src="https://latex.codecogs.com/svg.image?\frac{\partial&space;C}{\partial&space;y_i}&space;=&space;4\sum_{j}&space;(p_{ij}-q_{ij})(y_i&space;-&space;y_j)(1&plus;||y_i&space;-&space;y_j||^2)^{-1}" title="\frac{\partial C}{\partial y_i} = 4\sum_{j} (p_{ij}-q_{ij})(y_i - y_j)(1+||y_i - y_j||^2)^{-1}" />
 </p>
 
-## Example Code
+## Python Example
 MNIST 데이터셋과, Swiss Roll 데이터에 대해 t-SNE를 진행해보겠습니다.
 
-
+## Parameters
 ### Effect of Perplexity Parameter
 Perplexity는 t-SNE의 결과물에 큰 영향을 끼치는 parameter입니다. [Scikit-Learn](https://scikit-learn.org/stable/auto_examples/manifold/plot_t_sne_perplexity.html#sphx-glr-auto-examples-manifold-plot-t-sne-perplexity-py)에서는 perplexity에 따라 여러 결과물을 얻어낼 수 있음을 보여주고 있습니다. 큰 perplexity일수록, 위상적 데이터 구조를 잘 유지하고 있습니다. 반대로 작은 perplexity에서는 데이터 구조를 유지하지는 못하지만, 더 강력한 clustering 효과를 얻을 수 있습니다. 그러나 너무 작거나 큰 perplexity에서는 오히려 데이터에 대한 구조적 정보를 망가트리기 때문에, 적절한 수치를 찾는것이 필요합니다. 자세한 내용은 [“How to Use t-SNE Effectively”](https://distill.pub/2016/misread-tsne/)의 article에서 확인할 수 있습니다.
+
+
